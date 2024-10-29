@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Abel;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+  }
+  
+  .container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      font-weight: 500;
+  }
+  
+  .container-home-menu-list {
+    margin-left: 20px;
+    list-style: none;
+    display: flex;
+  }
+  
+  .container-home-menu-list li {
+    margin-right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: 0.4s;
+  }
+  
+  li:hover {
+    opacity: 0.7;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+   
+  main {
+   margin-top: 10px;
+   margin-bottom: 50px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .store-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .store {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    
+  }
+  
+  .store h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .store p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .update-btn, .delete-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .update-btn {
+    background-color: #3f51b5;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ffffff;
+    position: fixed;
+  }
+  footer p {
+    margin: 0;
+  }
+  
