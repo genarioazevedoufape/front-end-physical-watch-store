@@ -18,9 +18,15 @@
                 Estado: ${loja.endereco.estado}
               </p>
             </div>
-            <div class="distance">
-              <img src="https://img.icons8.com/?size=100&id=13800&format=png&color=000000" alt="Location Pin">
-              <p><strong>${loja.distancia}</strong> de distância</p>
+            <div class="informacoes-distancia">
+              <div class="informacoes" id="informacoes">
+                <p><strong>Funciona da:</strong> ${loja.informacoes.diasFuncionamento}</p>
+                <p><strong>Horário de funcionamento das:</strong> ${loja.informacoes.horarioFuncionamento}</p>
+              </div>
+              <div class="distance">
+                <img src="https://img.icons8.com/?size=100&id=13800&format=png&color=000000" alt="Location Pin">
+                <p><strong>${loja.distancia}</strong> de distância</p>
+              </div>
             </div>
           </div>
         `;

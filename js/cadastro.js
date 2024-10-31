@@ -34,6 +34,10 @@ document.getElementById('cadastroForm').addEventListener('submit', async (event)
                 coordenadas: {
                     latitude: data.latitude || 0, 
                     longitude: data.longitude || 0  
+                },
+                informacoes: {
+                    horarioFuncionamento: data.horarioFuncionamento,
+                    diasFuncionamento: data.diasFuncionamento
                 }
             })
         });

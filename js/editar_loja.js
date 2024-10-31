@@ -28,6 +28,8 @@ function populateForm(loja) {
     document.getElementById('estado').value = loja.endereco.estado;
     document.getElementById('longitude').value = loja.coordenadas.longitude;
     document.getElementById('latitude').value = loja.coordenadas.latitude;
+    document.getElementById('horarioFuncionamento').value = loja.informacoes.horarioFuncionamento;
+    document.getElementById('diasFuncionamento').value = loja.informacoes.diasFuncionamento;
 }
 
 // Obtém o ID da loja a partir da URL e chama a função de busca

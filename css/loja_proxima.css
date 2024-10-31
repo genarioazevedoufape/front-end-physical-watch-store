@@ -101,7 +101,6 @@
     padding: 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 100%;
     margin: 10px;
     display: flex;
     justify-content: space-between;
@@ -117,6 +116,13 @@
   .store p {
     font-size: 1rem;
     line-height: 1.5;
+  }
+
+  .informacoes-distancia {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
   }
   
   .distance {
@@ -147,7 +153,6 @@
     color: #000000; 
   }
   
- 
   button {
     background-color: #007f3b;
     border: none;
