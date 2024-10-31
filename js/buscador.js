@@ -1,13 +1,12 @@
 // Evento para buscar lojas ao clicar no botão
 document.getElementById('searchButton').addEventListener('click', async () => {
-    const cep = document.getElementById('cepInput').value.replace('-', ''); // Remove o hífen para garantir que o CEP tenha 8 dígitos
+    const cep = document.getElementById('cepInput').value.replace('-', ''); 
     
     // Verifica se o CEP possui exatamente 8 dígitos
     if (!/^\d{8}$/.test(cep)) {
         alert('Por favor, insira um CEP válido de 8 dígitos.');
         return;
     }
-
     try {
         const response = await fetch(`http://localhost:3000/loja/localizar/${cep}`);
 
@@ -43,5 +42,5 @@ document.getElementById('cepInput').addEventListener('input', function (e) {
         cep = cep.replace(/^(\d{5})(\d)/, '$1-$2');
     }
 
-    e.target.value = cep; // Atualiza o campo de entrada com a máscara
+    e.target.value = cep; 
 });

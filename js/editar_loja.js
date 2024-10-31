@@ -16,7 +16,6 @@ async function fetchLojaPorId(id) {
         alert('Erro ao carregar os dados da loja. Tente novamente mais tarde.');
     }
 }
-
 // Função para preencher o formulário com os dados da loja
 function populateForm(loja) {
     document.getElementById('name').value = loja.nome;

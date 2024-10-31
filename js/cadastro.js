@@ -1,5 +1,5 @@
 document.getElementById('cancelButton').addEventListener('click', () => {
-    window.history.back(); // Volta para a página anterior
+    window.history.back(); 
 });
 
 document.getElementById('cadastroForm').addEventListener('submit', async (event) => {
@@ -9,10 +9,10 @@ document.getElementById('cadastroForm').addEventListener('submit', async (event)
     const data = Object.fromEntries(formData); 
 
     // Validação do campo CEP
-    const cep = data.cep.replace(/\D/g, ''); // Remove formatação
+    const cep = data.cep.replace(/\D/g, ''); 
     if (!cep || cep.length !== 8) {
         alert('O campo "cep" é obrigatório e deve ser um CEP válido de 8 dígitos.');
-        return; // Interrompe o envio do formulário
+        return; 
     }
 
     try {
@@ -24,7 +24,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async (event)
             body: JSON.stringify({
                 nome: data.name,
                 endereco: {
-                    cep: cep, // Enviar o CEP sem hífen
+                    cep: cep, 
                     logradouro: data.logradouro,
                     numero: data.numero,
                     bairro: data.bairro,
@@ -47,12 +47,12 @@ document.getElementById('cadastroForm').addEventListener('submit', async (event)
 
         if (response.ok) {
             alert('Loja cadastrada com sucesso!');
-            document.getElementById('cadastroForm').reset(); // Limpar o formulário
-            document.getElementById('coordenadas').style.display = 'none'; // Ocultar campos de coordenadas
+            document.getElementById('cadastroForm').reset(); 
+            document.getElementById('coordenadas').style.display = 'none'; 
         } else {
             messageDiv.innerHTML = `<p style="color: red;">Erro: ${result.message}</p>`;
             if (result.message.includes('forneça latitude e longitude')) {
-                document.getElementById('coordenadas').style.display = 'block'; // Exibir campos de coordenadas
+                document.getElementById('coordenadas').style.display = 'block'; 
             }
         }
     } catch (error) {
@@ -63,18 +63,18 @@ document.getElementById('cadastroForm').addEventListener('submit', async (event)
 
 // Máscara para o CEP
 document.getElementById('cep').addEventListener('input', function (e) {
-    let cep = e.target.value.replace(/\D/g, ''); // Remove qualquer caractere que não seja número
+    let cep = e.target.value.replace(/\D/g, ''); 
 
     if (cep.length > 5) {
-        cep = cep.replace(/^(\d{5})(\d)/, '$1-$2'); // Adiciona o hífen após o quinto dígito
+        cep = cep.replace(/^(\d{5})(\d)/, '$1-$2'); 
     }
 
-    e.target.value = cep; // Atualiza o campo de entrada com a máscara
+    e.target.value = cep; 
 });
 
 // Busca de endereço pelo CEP
 document.getElementById('searchCep').addEventListener('click', async () => {
-    const cep = document.getElementById('cep').value.replace(/\D/g, ''); // Remove formatação
+    const cep = document.getElementById('cep').value.replace(/\D/g, ''); 
     if (!cep || cep.length !== 8) {
         alert('Por favor, insira um CEP válido de 8 dígitos.');
         return;

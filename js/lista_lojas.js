@@ -1,7 +1,7 @@
     // Função para buscar as lojas do backend
     async function fetchLojas() {
         try {
-          const response = await fetch('http://localhost:3000/loja/listar'); // URL da API para listar as lojas
+          const response = await fetch('http://localhost:3000/loja/listar'); 
   
           if (!response.ok) {
             throw new Error('Erro ao buscar as lojas');
@@ -44,8 +44,8 @@
       const updateButtons = storeListDiv.querySelectorAll('.update-btn');
       updateButtons.forEach(button => {
         button.addEventListener('click', () => {
-          const lojaId = button.getAttribute('data-id'); // Pegue o ID do botão
-          window.location.href = `editar_loja.html?id=${lojaId}`; // Redirecione para a página de edição
+          const lojaId = button.getAttribute('data-id'); 
+          window.location.href = `editar_loja.html?id=${lojaId}`; 
         });
       });
   
