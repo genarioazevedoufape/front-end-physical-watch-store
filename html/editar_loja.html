@@ -17,12 +17,17 @@
         <li><a href="lista_lojas.html">&lt;&lt; Voltar</a></li>
       </ul>
     </header>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <img src="" alt="Sucesso" id="modal-image">
+          <p id="modal-message"></p>
+      </div>
+    </div> 
     <main>
       <h1>Editar Physical-Store</h1>
       <form class="form" id="edit-form">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required>
-        
         <label for="cep">CEP:</label>
         <div class="cep-container">
           <input type="text" id="cep" name="cep" required maxlength="9">

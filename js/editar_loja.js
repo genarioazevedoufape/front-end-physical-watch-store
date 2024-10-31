@@ -100,10 +100,10 @@ document.querySelector('.form').addEventListener('submit', async (e) => {
         if (!response.ok) {
             throw new Error('Erro ao atualizar a loja');
         }
-        alert('Loja atualizada com sucesso!');
+        showModal('Loja atualizada com sucesso!', true);
     } catch (error) {
         console.error(error.message);
-        alert('Coordenadas não encontradas para o CEP fornecido. Por favor, forneça latitude e longitude.');
+        showModal('Erro: Coordenadas não encontradas para o CEP fornecido. Por favor, forneça latitude e longitude.', false);
 
         // Exibe os campos de coordenadas caso estejam faltando
         document.getElementById('label-coordenadas').style.display = 'block';
@@ -122,4 +122,31 @@ document.getElementById('cep').addEventListener('input', function (e) {
     }
 
     e.target.value = cep; // Atualiza o campo de entrada com a máscara
+});
+
+// Função para exibir o modal com uma mensagem específica
+function showModal(message, isSuccess) {
+    const modal = document.getElementById("modal");
+    const modalMessage = document.getElementById("modal-message");
+    const modalImage = document.getElementById("modal-image");
+
+    // Alterar imagem com base no resultado
+    if (isSuccess) {
+        modalImage.src = "../img/atualizado.png";
+        modalImage.alt = "Atualização bem-sucedida";
+    } else {
+        modalImage.src = "../img/erro.png";
+        modalImage.alt = "Erro na atualização";
+    }
+
+    modalMessage.textContent = message;
+    modalMessage.style.color = isSuccess ? 'green' : 'red';
+    modal.style.display = "block";
+}
+
+// Fecha o modal ao clicar fora da área do modal
+window.addEventListener("click", (event) => {
+    if (event.target === document.getElementById("modal")) {
+        document.getElementById("modal").style.display = "none";
+    }
 });
