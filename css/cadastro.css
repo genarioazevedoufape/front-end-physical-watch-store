@@ -239,7 +239,10 @@
     text-align: center;
     font-family: 'Abel', sans-serif;
     border-radius: 20px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
 }
 
 .modal-content p {
@@ -252,6 +255,7 @@
 #erro {
     height: 50px;
 }
+
 #sucesso {
     height: 50px;
 }
